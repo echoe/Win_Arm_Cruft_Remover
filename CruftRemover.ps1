@@ -1,9 +1,19 @@
-# Script for uninstalling unnecessary applications from Windows
-# Please feel free to add or remove programs based on your own preferences. I just wanted to be able to rerun this in case of Windows update.
+# Script for uninstalling unnecessary applications from Windows on ARM 4GB laptops
+# Please feel free to add or remove programs based on your own preferences.
+# Some inspiration taken from tiny11: https://github.com/ntdevlabs/tiny11builder
+# To see current installed programs on your machine, run this one-liner in PowerShell Admin:
+# Get-AppxPackage | SELECT Name
 # Microsoft.549981C3F5F10 is Cortana.
-# This uninstalls Office, OneNote, Teams, ClipChamp, and OneDrive - if you want those on your computer, remove those lines from the script.
-# This doesn't uninstall 'Microsoft.XboxSpeechToTextOverlay' so I'm at less risk of breaking Windows.
+# This uninstalls a bunch of stuff. If you like stuff I am removing, feel free to remove it from the script before you run it.
+# Things that I am not uninstalling because Windows errors at me:
+# "Microsoft.XboxSpeechToTextOverlay","Microsoft.XboxGameCallableUI"
+# I am actively using this on my laptop but this could possibly break your install maybe! No promises!
 $PackageList = @("Microsoft.YourPhone",
+"Microsoft.GetHelp",
+"Microsoft.GetStarted",
+"Microsoft.Todos",
+"Microsoft.People",
+"MicrosoftCorporationII.QuickAssist",
 "Microsoft.Office",
 "Microsoft.OneNote",
 "Microsoft.Teams",
@@ -13,7 +23,6 @@ $PackageList = @("Microsoft.YourPhone",
 "Microsoft.OneDriveSync"
 "Microsoft.BingWeather",
 "Microsoft.BingNews",
-"Microsoft.XboxGameCallableUI",
 "Microsoft.XboxGameOverlay",
 "Microsoft.XboxGamingOverlay",
 "Microsoft.Xbox.TCUI",
