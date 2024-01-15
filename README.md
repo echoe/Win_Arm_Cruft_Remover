@@ -1,3 +1,8 @@
+NOTE: I found this:
+https://github.com/Raphire/Win11Debloat
+If I wasn't me, I would say that's a better option. But YMMV. I'll keep this up for posterity, with the changes I made before finding that as well.
+
+Old README below:
 I wrote this script because I bought a 4GB laptop and wanted it to be usable and to be able to make it usable again in a repeatable way.
 Please feel free to add or remove programs based on your own preferences when you run this!
 Some inspiration taken from tiny11: https://github.com/ntdevlabs/tiny11builder
